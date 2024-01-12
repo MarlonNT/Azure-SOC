@@ -3,7 +3,7 @@
 
 ## Introduction
 
-The goal of this project was to build my own SOC environment, in the form of a mini honeynet in Azure, and ingest log sources from various resources into a Log Analytics workspace, which is then used by Microsoft Sentinel to build attack maps, trigger alerts, and create incidents. I measured some security metrics in the insecure environment for 24 hours, apply some security controls to harden the environment, measure metrics for another 24 hours, then show the results below. The metrics we will show are:
+The goal of this project was to build my own SOC environment, in the form of a mini honeynet in Azure. I captured logs from various resources, and ingested those logs into a Log Analytics workspace, which was then used by Microsoft Sentinel (SIEM), to build attack maps, trigger alerts, and create incidents. In the effort to learn more about the Azure cloud environment, I analyzed some security metrics in an insecure environment, deploying 2 vulnerable Virtual Machines (1 Windows 10 & 1 Linux Ubuntu) by turning off their firewalls, and letting them run for 24 hours. This created many security incidents and gave me the opportunity to practice incident response following the NIST 800-61 framework. I then applied some security controls in conjunction with framework NIST 800-53, in order to harden my environment, and measured those same metrics for another 24 hours, allowing me to compare and contrast the two. Finally, I show the results below. The metrics we will be showing are the following: 
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
