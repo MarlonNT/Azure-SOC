@@ -3,7 +3,9 @@
 
 ## Introduction
 
-The goal of this project was to build my own SOC environment, in the form of a mini honeynet in Azure. I captured logs from various resources, and ingested those logs into a Log Analytics workspace, which was then used by Microsoft Sentinel (SIEM), to build attack maps, trigger alerts, and create incidents. In the effort to learn more about the Azure cloud environment, I analyzed some security metrics in an insecure environment, deploying 2 vulnerable Virtual Machines (1 Windows 10 & 1 Linux Ubuntu) by turning off their firewalls, and letting them run for 24 hours. This created many security incidents and gave me the opportunity to practice incident response following the NIST 800-61 framework. I then applied some security controls in conjunction with framework NIST 800-53, in order to harden my environment, and measured those same metrics for another 24 hours, allowing me to compare and contrast the two. Finally, I show the results below. The metrics we will be showing are the following: 
+Cybersecurity is a field that is currently in very high demand, and we are seeing a huge surge of individuals interested in joining the field. However, we are all aware of a particular catch 22 that we all face, as we are trying to make the transition into the field: "You need experience to get a job, but you need a job to get experience". This is where hands-on projects are very useful. They allow you to get practical experience and knowledge, which you will be able to apply to real world cases, using industry standard tools. 
+
+The goal of this project was to build my own SOC environment, in the form of a mini honeynet in Azure. I captured logs from various resources, and ingested those logs into a Log Analytics workspace, which was then used by Microsoft Sentinel (SIEM), to build attack maps, trigger alerts, and create incidents. In the effort to learn more about the Azure cloud environment, I analyzed some security metrics in an insecure environment, deploying 2 vulnerable Virtual Machines (1 Windows 10 & 1 Linux Ubuntu) by turning off their firewalls (leaving them wide open), and letting them run for 24 hours over the internet. This created many security incidents and gave me the opportunity to practice incident response following the NIST 800-61 framework (incident response lifecycle). I then applied some security controls in accordance with the NIST 800-53 framework, in order to harden my environment, and measured those same metrics for another 24 hours. This allowed me to compare and contrast the two days, and analyze the difference in the number of security events. Finally, I show the results below. The metrics we will be showing are the following: 
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
@@ -26,6 +28,9 @@ Here are the components that were found in the architecture of the mini honeynet
 - Azure Key Vault
 - Azure Storage Account
 - Microsoft Sentinel
+
+We also used Microsoft Azure Active Directory to create users, assign them roles and generate login attempts logs for those same users. 
+I used the Kusto Query Language (KQL), a microsoft native query language to gather logs inside of my Log Analytics Workspace, and create my attack world maps.
 
 In order to capture the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. I made sure to leave the Network Security Groups and built-in firewalls wide open for my Virtual Machines, and all other resources were deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
 
