@@ -29,7 +29,7 @@ Here are the components that were found in the architecture of the mini honeynet
 - Azure Storage Account
 - Microsoft Sentinel
 
-We also used Microsoft Azure Active Directory to create users, assign them roles and generate login attempts logs for those same users. 
+I also used Microsoft Azure Active Directory to create users, assign them roles and generate login attempts logs for those same users. 
 I used the Kusto Query Language (KQL), a microsoft native query language to gather logs inside of my Log Analytics Workspace, and create my attack world maps.
 
 In order to capture the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. I made sure to leave the Network Security Groups and built-in firewalls wide open for my Virtual Machines, and all other resources were deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
