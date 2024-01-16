@@ -76,6 +76,16 @@ Stop Time	2023-12-23 18:52:40
 | SecurityIncident         | 0
 | AzureNetworkAnalytics_CL | 0
 
+## % of Improvement After Hardening Environment
+
+| Metric                   | Change
+| ------------------------ | -----
+| SecurityEvent            | -47.62%
+| Syslog                   | -99.99%
+| SecurityAlert            | -100%
+| SecurityIncident         | -100%
+| AzureNetworkAnalytics_CL | -100%
+
 ## Conclusion
 
 As a cybersecurity / cloud enthusiast and future professional, this project was the perfect way to get some real hands-on, practical cybersecuirty experience on the Microsoft Azure platform. I not only learned how to deploy virtual machines, but also learned how to troubleshoot login issues, how to secure a network, create users and generate logs from Azure Active Directory (Now known as Entra ID), ingest logs into a centralized Log Analytics Workspace and link it to microsoft Sentinel to trigger security alerts to spin up incidents for myself, to practice incident response. I was also able to learn how to write KQL queries in order to generate my logs, and to create my attack maps. 
