@@ -14,7 +14,7 @@ The goal of this project was to build my own SOC environment, in the form of a m
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
 ## Architecture Before Hardening / Security Controls
-![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
+![image](https://github.com/MarlonNT/Azure-SOC/assets/119909466/5d8525cc-6362-4dd5-b7f6-37f4fe04614e)
 
 ## Architecture After Hardening / Security Controls
 ![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
